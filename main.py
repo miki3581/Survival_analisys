@@ -7,9 +7,9 @@ def main():
     df = load_data()
     df_clean = clean_data(df)
     df_imputed = impute_data(df_clean)
-    df = scale_data(df_imputed)
-    print(df_imputed.head())
-    save_csv(df_imputed)
+    df_scaled = scale_data(df_imputed)
+    print(df_scaled.head())
+    save_csv(df_scaled)
     
 
 if __name__ == "__main__":
