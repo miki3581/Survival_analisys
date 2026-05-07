@@ -64,3 +64,9 @@ def scale_data(df) -> pd.DataFrame:
     df_scaled[cols_to_scale] = scaler.fit_transform(df_scaled[cols_to_scale])
     
     return df_scaled
+
+def save_csv(df) -> pd.DataFrame:
+
+    # Saving dataframe to a csv file
+    df.to_csv("preprocessed_data.csv")
+    return df
